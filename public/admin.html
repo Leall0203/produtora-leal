@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel de Leads | Produtora Leal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="topbar compact">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.jpg" alt="Logo Produtora Leal" class="brand-logo" />
+        <div>
+          <span class="brand-name">Produtora Leal</span>
+          <small>Painel de Leads</small>
+        </div>
+      </a>
+      <div class="admin-actions">
+        <span id="adminUserBadge" class="admin-badge">Administrador</span>
+        <a class="btn btn-outline" href="index.html">Voltar ao site</a>
+        <button id="logoutButton" class="btn btn-dark" type="button">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-head left">
+        <span class="eyebrow">Administração protegida</span>
+        <h1>Leads captados pelo site</h1>
+        <p>Somente usuários autenticados conseguem visualizar as empresas e contatos enviados pelo formulário.</p>
+      </div>
+
+      <div class="summary-boxes" id="summaryBoxes">
+        <div class="summary-card">
+          <strong id="totalLeads">0</strong>
+          <span>Total de leads</span>
+        </div>
+        <div class="summary-card wide">
+          <strong>Serviços mais pedidos</strong>
+          <div id="serviceSummary" class="service-summary">Carregando...</div>
+        </div>
+      </div>
+
+
+
+      <section class="admin-grid">
+        <div class="admin-card">
+          <h2>Usuários administrativos</h2>
+          <p>Somente administradores logados podem ver esta lista e criar novos acessos.</p>
+          <div id="adminsList" class="admins-list">Carregando administradores...</div>
+        </div>
+
+        <div class="admin-card">
+          <h2>Criar novo administrador</h2>
+          <form id="createAdminForm" class="lead-form mini-form">
+            <label>
+              Usuário
+              <input type="text" name="usuario" placeholder="novo_usuario" required>
+            </label>
+            <label>
+              Senha
+              <input type="password" name="senha" placeholder="Nova senha" required>
+            </label>
+            <button type="submit" class="btn btn-primary full-btn">Criar administrador</button>
+            <p id="createAdminStatus" class="form-status"></p>
+          </form>
+        </div>
+
+        <div class="admin-card">
+          <h2>Alterar minha senha</h2>
+          <form id="changePasswordForm" class="lead-form mini-form">
+            <label>
+              Senha atual
+              <input type="password" name="senhaAtual" placeholder="Sua senha atual" required>
+            </label>
+            <label>
+              Nova senha
+              <input type="password" name="novaSenha" placeholder="Sua nova senha" required>
+            </label>
+            <button type="submit" class="btn btn-outline full-btn">Atualizar senha</button>
+            <p id="changePasswordStatus" class="form-status"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="admin-toolbar">
+        <div class="toolbar-left">
+          <input id="searchLeadInput" type="search" placeholder="Buscar por nome, empresa, telefone ou e-mail">
+          <select id="serviceFilter">
+            <option value="">Todos os serviços</option>
+          </select>
+        </div>
+        <div class="toolbar-right">
+          <button id="exportCsvButton" class="btn btn-outline" type="button">Exportar CSV</button>
+        </div>
+      </section>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Empresa</th>
+              <th>Telefone</th>
+              <th>E-mail</th>
+              <th>Cidade</th>
+              <th>Serviço</th>
+              <th>Orçamento</th>
+              <th>Prioridade</th>
+              <th>Mensagem</th>
+              <th>Data</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="leadsTableBody">
+            <tr>
+              <td colspan="12">Carregando leads...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

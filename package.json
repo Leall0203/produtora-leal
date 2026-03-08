@@ -1,0 +1,14 @@
+{
+  "name": "produtora-leal-site",
+  "version": "1.1.0",
+  "description": "Site profissional da Produtora Leal com captação de leads e painel administrativo protegido por login.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.1",
+    "sqlite3": "^5.1.7"
+  }
+}

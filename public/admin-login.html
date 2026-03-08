@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login administrativo | Produtora Leal</title>
+  <meta name="description" content="Área de login administrativo da Produtora Leal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body auth-page">
+  <header class="topbar compact">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.jpg" alt="Logo Produtora Leal" class="brand-logo" />
+        <div>
+          <span class="brand-name">Produtora Leal</span>
+          <small>Área administrativa</small>
+        </div>
+      </a>
+      <a class="btn btn-outline" href="index.html">Voltar ao site</a>
+    </div>
+  </header>
+
+  <main class="section auth-wrap">
+    <div class="container auth-center">
+      <div class="auth-card">
+        <span class="eyebrow">Acesso restrito</span>
+        <h1>Login do administrador</h1>
+        <p>Somente você poderá visualizar as empresas e contatos cadastrados no banco de dados.</p>
+
+        <form id="loginForm" class="lead-form auth-form">
+          <label>
+            Usuário
+            <input type="text" name="usuario" placeholder="Digite seu usuário" required>
+          </label>
+          <label>
+            Senha
+            <input type="password" name="senha" placeholder="Digite sua senha" required>
+          </label>
+          <button type="submit" class="btn btn-primary full-btn">Entrar no painel</button>
+          <p id="loginStatus" class="form-status"></p>
+        </form>
+
+        <div class="auth-note">
+          <strong>Dica:</strong> agora os administradores ficam salvos no banco de dados e podem ser gerenciados dentro do painel.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="admin-login.js"></script>
+</body>
+</html>

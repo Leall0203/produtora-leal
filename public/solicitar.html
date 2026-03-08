@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicitar orçamento | Produtora Leal</title>
+  <meta name="description" content="Página de solicitação de orçamento da Produtora Leal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar compact">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.jpg" alt="Logo Produtora Leal" class="brand-logo" />
+        <div>
+          <span class="brand-name">Produtora Leal</span>
+          <small>Solicitação de orçamento</small>
+        </div>
+      </a>
+
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="admin-login.html">Painel</a>
+      </nav>
+
+      <a class="btn btn-outline" href="https://wa.me/5567998250575?text=Olá%2C%20vim%20através%20do%20site%20da%20Produtora%20Leal.%20Quero%20solicitar%20um%20orçamento." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </header>
+
+  <main class="section request-page">
+    <div class="container request-grid">
+      <section>
+        <div class="section-head left">
+          <span class="eyebrow">Briefing do projeto</span>
+          <h1>Preencha os dados para enviar sua solicitação</h1>
+          <p>Esta página foi criada só para captação de clientes. Ao enviar, os dados ficam armazenados no banco do site e aparecem no painel administrativo.</p>
+        </div>
+
+        <div class="info-stack">
+          <article class="card soft-card">
+            <h3>O que você pode pedir</h3>
+            <p>Site institucional, landing page, loja virtual, sistema web, painel administrativo, automação, redesign e soluções personalizadas.</p>
+          </article>
+          <article class="card soft-card">
+            <h3>Atendimento</h3>
+            <p>Você também pode falar direto no WhatsApp para agilizar dúvidas, orçamento e fechamento do projeto.</p>
+          </article>
+        </div>
+      </section>
+
+      <form id="leadForm" class="lead-form request-form">
+        <div class="form-grid">
+          <label>
+            Nome
+            <input type="text" name="nome" required>
+          </label>
+          <label>
+            Empresa
+            <input type="text" name="empresa">
+          </label>
+          <label>
+            Telefone / WhatsApp
+            <input type="text" name="telefone" required>
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email">
+          </label>
+          <label>
+            Cidade
+            <input type="text" name="cidade" value="Dourados - MS">
+          </label>
+          <label>
+            Serviço desejado
+            <select name="servico" required>
+              <option value="">Selecione</option>
+              <option>Site institucional</option>
+              <option>Landing page</option>
+              <option>Loja virtual</option>
+              <option>Sistema web</option>
+              <option>Painel administrativo</option>
+              <option>Captação de leads</option>
+              <option>Redesign de site</option>
+              <option>Automação</option>
+              <option>Outro projeto</option>
+            </select>
+          </label>
+          <label>
+            Faixa de orçamento
+            <select name="orcamento">
+              <option value="">Selecione</option>
+              <option>Até R$ 800</option>
+              <option>R$ 800 a R$ 1.500</option>
+              <option>R$ 1.500 a R$ 3.000</option>
+              <option>Acima de R$ 3.000</option>
+            </select>
+          </label>
+          <label>
+            Prioridade
+            <select name="prioridade">
+              <option value="">Selecione</option>
+              <option>Baixa</option>
+              <option>Média</option>
+              <option>Alta</option>
+              <option>Urgente</option>
+            </select>
+          </label>
+          <label class="full">
+            Detalhes do projeto
+            <textarea name="mensagem" rows="6" placeholder="Descreva o que sua empresa precisa."></textarea>
+          </label>
+        </div>
+        <input type="hidden" name="origem" value="pagina-solicitacao-produtora-leal">
+        <button type="submit" class="btn btn-primary full-btn">Enviar solicitação</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
